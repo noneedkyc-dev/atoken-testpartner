@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AToken Network Explorer</title>
+  <meta name="description" content="AToken network explorer style partnership website." />
+  <meta name="theme-color" content="#0077ff" />
+  <meta property="og:title" content="AToken Network Explorer" />
+  <meta property="og:description" content="Powered by connections. Built for the future." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/atoken-logo.png" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="icon" href="./assets/atoken-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="./assets/atoken-logo.png" alt="AToken logo" />
+      <span>ATOKEN</span>
+    </div>
+    <nav class="topnav">
+      <a href="#">Network</a>
+      <a href="#" class="active">Partners</a>
+      <a href="#">Ecosystem</a>
+      <a href="#">Governance</a>
+      <a href="#">Docs</a>
+    </nav>
+    <div class="top-actions">
+      <div class="search-box">
+        <input id="topSearch" type="text" placeholder="Search address / partner" />
+      </div>
+      <a href="#" class="wallet-btn">Connect Wallet</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero-layout">
+      <aside class="left-column panel">
+        <h1>ATOKEN</h1>
+        <h2>POWERED BY CONNECTIONS<br><span>BUILT FOR THE FUTURE</span></h2>
+        <p id="heroSub"></p>
+        <div class="metric-grid" id="metricGrid"></div>
+        <div class="live-box"><div class="live-dot"></div><span>Live Data</span></div>
+      </aside>
+
+      <section class="center-column panel">
+        <svg id="networkSvg" class="network-svg" viewBox="0 0 1000 700" preserveAspectRatio="none"></svg>
+        <div class="core" id="core">
+          <div class="core-ring ring-a"></div>
+          <div class="core-ring ring-b"></div>
+          <div class="core-inner">
+            <img src="./assets/atoken-logo.png" alt="AToken" />
+            <div class="core-title">ATOKEN</div>
+          </div>
+        </div>
+        <div id="planetLayer"></div>
+        <div id="miniLayer"></div>
+      </section>
+
+      <aside class="right-column">
+        <div class="panel info-panel">
+          <div class="panel-title">NODE INSIGHT</div>
+          <div class="node-card">
+            <div class="node-badge" id="nodeBadge">KOL Node</div>
+            <div class="node-desc" id="nodeDesc">Key opinion leaders amplifying AToken’s vision to the world.</div>
+            <div class="node-stats">
+              <div><span>Total Partners</span><strong id="nodeTotal">132</strong></div>
+              <div><span>Total Reach</span><strong id="nodeReach">75.6M</strong></div>
+              <div><span>Engagement</span><strong id="nodeEngagement">8.7%</strong></div>
+            </div>
+            <div class="sub-title">TOP PARTNERS</div>
+            <div id="topPartners" class="top-partners"></div>
+            <a href="#directory" class="view-all-btn">View All Partners →</a>
+          </div>
+        </div>
+
+        <div class="panel flow-panel">
+          <div class="panel-title">ON-CHAIN FLOW</div>
+          <div class="flow-chart"><div class="flow-dots"></div></div>
+          <div class="flow-meta">
+            <div><strong>234</strong><span>Interactions</span></div>
+            <div><strong>12m ago</strong><span>Last Update</span></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="directory panel" id="directory">
+      <div class="directory-head">
+        <div><div class="section-title">PARTNER DIRECTORY</div></div>
+        <div class="directory-controls">
+          <input id="searchInput" type="text" placeholder="Search partners, addresses, or keywords..." />
+          <select id="typeFilter">
+            <option value="all">All</option>
+            <option value="KOL">KOLs</option>
+            <option value="Community">Communities</option>
+            <option value="Institution">Institutions</option>
+            <option value="Project">Projects</option>
+            <option value="Media">Media</option>
+          </select>
+        </div>
+      </div>
+      <div class="chip-row" id="chipRow"></div>
+      <div class="card-row" id="cardRow"></div>
+    </section>
+
+    <section class="trusted panel">
+      <div class="trusted-label">TRUSTED BY</div>
+      <div class="trusted-list" id="trustedList"></div>
+    </section>
+
+    <section class="bottom-bar panel">
+      <div class="bottom-left">
+        <strong>The network is live.</strong>
+        <span>New connections are forming every second.</span>
+      </div>
+      <div class="bottom-stats">
+        <div><span>Total Connections</span><strong>24,532</strong></div>
+        <div><span>Active Today</span><strong>1,086</strong></div>
+        <div><span>Updated</span><strong>12s ago</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
